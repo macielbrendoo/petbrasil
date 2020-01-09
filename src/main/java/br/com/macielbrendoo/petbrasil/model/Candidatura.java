@@ -2,7 +2,6 @@ package br.com.macielbrendoo.petbrasil.model;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

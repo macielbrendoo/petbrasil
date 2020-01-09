@@ -12,19 +12,19 @@ public class Candidato {
     private String nome;
     private String email;
     private int idade;
-    private int telefone;
+    private String telefone;
     private String especialidade;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Candidatura candidatura;
 
     public Candidato() {
     }
 
-    public Candidato(String nome, int idade, String cpf, String email, int telefone, String especialidade, Endereco endereco, Candidatura candidatura) {
+    public Candidato(String nome, int idade, String cpf, String email, String telefone, String especialidade, Endereco endereco, Candidatura candidatura) {
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;
@@ -51,7 +51,7 @@ public class Candidato {
         return email;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
@@ -81,7 +81,7 @@ public class Candidato {
         this.idade = idade;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
