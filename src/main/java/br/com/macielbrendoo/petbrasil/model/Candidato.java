@@ -24,17 +24,6 @@ public class Candidato {
     public Candidato() {
     }
 
-    public Candidato(String nome, int idade, String cpf, String email, String telefone, String especialidade, Endereco endereco, Candidatura candidatura) {
-        this.nome = nome;
-        this.idade = idade;
-        this.cpf = cpf;
-        this.email = email;
-        this.telefone = telefone;
-        this.especialidade = especialidade;
-        this.endereco = endereco;
-        this.candidatura = candidatura;
-    }
-
     public String getNome() {
         return nome;
     }
