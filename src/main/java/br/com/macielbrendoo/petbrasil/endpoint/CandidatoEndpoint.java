@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("candidato")
 public class CandidatoEndpoint {
@@ -15,6 +16,13 @@ public class CandidatoEndpoint {
     @Autowired
     public CandidatoEndpoint(CandidatoRepository candidatoDAO) {
         this.candidatoDAO = candidatoDAO;
+    }
+
+
+    @GetMapping("/candidaturas")
+    public ResponseEntity<?> listCandidatura() {
+
+        return new ResponseEntity<>(candidatoDAO.findAllByCandidaturaIsNotNull(), HttpStatus.OK);
     }
 
     @GetMapping("/{cpf}")
