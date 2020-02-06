@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Entity
 public class Endereco {
     @EmbeddedId
-    private enderecoPK enderecoPK;
+    private EnderecoPK enderecoPK;
     private String logradouro;
     private String bairro;
     private String cidade;
@@ -18,11 +18,11 @@ public class Endereco {
     public Endereco() {
     }
 
-    public br.com.macielbrendoo.petbrasil.model.enderecoPK getEnderecoPK() {
+    public br.com.macielbrendoo.petbrasil.model.EnderecoPK getEnderecoPK() {
         return enderecoPK;
     }
 
-    public void setEnderecoPK(br.com.macielbrendoo.petbrasil.model.enderecoPK enderecoPK) {
+    public void setEnderecoPK(br.com.macielbrendoo.petbrasil.model.EnderecoPK enderecoPK) {
         this.enderecoPK = enderecoPK;
     }
 
@@ -60,12 +60,12 @@ public class Endereco {
 }
 
 @Embeddable
-class enderecoPK implements Serializable{
+class EnderecoPK implements Serializable{
     private int numero;
     private String cep;
     private String complemento;
 
-    public enderecoPK() {
+    public EnderecoPK() {
     }
 
     public int getNumero() {
