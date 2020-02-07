@@ -2,6 +2,7 @@ package br.com.macielbrendoo.petbrasil.endpoint;
 
 import br.com.macielbrendoo.petbrasil.model.Candidato;
 import br.com.macielbrendoo.petbrasil.repository.CandidatoRepository;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class CandidatoEndpoint {
     }
 
     @PostMapping("/cadastro")
-    public ResponseEntity<?> createCandidato(@RequestBody Candidato candidato) {
+    public ResponseEntity<?> createCandidato(@RequestBody @NotNull Candidato candidato) {
         if(candidatoDAO.findById(candidato.getCpf()).isPresent()) {
             return new ResponseEntity<>("Usuário já cadastrado", HttpStatus.BAD_REQUEST);
         }
