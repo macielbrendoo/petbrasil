@@ -16,13 +16,14 @@ export default class src extends Component {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="petbrasil-navbar" />
             <Navbar.Collapse id="petbrasil-navbar">
-              <Nav className="ml-auto mr-auto">
+              <Nav className="ml-auto">
+                {/*
                 <NavDropdown title="Negócios e Oportunidades" id="no-dropdown">
                   <NavDropdown.Item href="#empresas">Empresas</NavDropdown.Item>
                   <NavDropdown.Item href="#equipamentos">Equipamentos</NavDropdown.Item>
                   <NavDropdown.Item href="#servicos">Serviços</NavDropdown.Item>
                 </NavDropdown>
-
+                */}
                 <NavDropdown title="Vagas" id="vagas-dropdown">
                   <NavDropdown.Item href="#vaga-banhista">Banhista</NavDropdown.Item>
                   <NavDropdown.Item href="#vaga-tosador">Tosador</NavDropdown.Item>
@@ -41,11 +42,13 @@ export default class src extends Component {
                   <NavDropdown.Item href="#candidato-canil">Canil / Passeador / Hotel</NavDropdown.Item>
                   <NavDropdown.Item href="#candidato-motorista">Motorista</NavDropdown.Item>
                 </NavDropdown>
+                {/*
                 <Nav.Link href="#cursos">Cursos</Nav.Link>
                 <Nav.Link href="#vendas">Vendas</Nav.Link>
                 <Nav.Link href="#doacao">Doação</Nav.Link>
+                */}
+                <Nav.Item><Button variant="outline-light">Entrar <FontAwesomeIcon icon={faSignInAlt}></FontAwesomeIcon></Button></Nav.Item>
               </Nav>
-                <Button variant="outline-light">Entrar <FontAwesomeIcon icon={faSignInAlt}></FontAwesomeIcon></Button>
             </Navbar.Collapse>
           </Container>
         </Navbar>
