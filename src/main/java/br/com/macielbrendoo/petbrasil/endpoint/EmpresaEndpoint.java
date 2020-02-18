@@ -17,6 +17,11 @@ public class EmpresaEndpoint {
         this.empresaDAO = empresaDAO;
     }
 
+    @GetMapping("/vagas")
+    public ResponseEntity<?> listVagas() {
+        return new ResponseEntity<>(empresaDAO.findDistinctByVagasIsNotNull(), HttpStatus.OK);
+    }
+
     @GetMapping("/{cpfCnpj}")
     public ResponseEntity<?> getEmpresa(@PathVariable String cpfCnpj) {
         if(empresaDAO.findById(cpfCnpj).isPresent()) {
